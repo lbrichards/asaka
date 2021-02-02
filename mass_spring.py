@@ -5,9 +5,9 @@ from scipy.integrate import odeint
 
 plt.rcParams['font.size'] = 14
 
-M = 5
-k = 4
-c = 30
+M = 15
+k = 2
+c = 5
 
 ν = c / M
 ω = k / M
@@ -37,7 +37,7 @@ t = np.linspace(0, 100, 1000)
 # in one function (x(t) in our case) to
 # a system of differential equations of
 # degree 1 in n functions
-uu = odeint(f, (1, .5), t, args=(ν, ω))
+uu = odeint(f, (-1.5, -2.5), t, args=(ν, ω))
 
 center = t.mean()
 
