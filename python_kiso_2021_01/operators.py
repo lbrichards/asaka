@@ -130,6 +130,8 @@ def operators_lesson1():
     0.0
     """
 
+#変更しました。
+
 
 if __name__ == "__main__":
     import doctest
