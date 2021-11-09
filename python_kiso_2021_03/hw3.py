@@ -22,8 +22,14 @@ fib(j)という関数を書いてください。正しければ、下記のtest_
 
 
 def fib(j):
-    """以下に実装してください。"""
-    ...
+    output = [1, 1]
+    for i in range(j-2):
+        output.append(output[-2] + output[-1])
+    return output
+
+
+
+
 
 
 '''
@@ -43,8 +49,9 @@ golden_ratio(n)
 
 
 def gold_ratio(n):
-    """以下に実装してください。"""
-    return ...
+    f = fib(n)
+    return f[-1]/f[-2]
+
 
 
 
@@ -52,11 +59,11 @@ class LessonThreeHomeworkTest(unittest.TestCase):
 
     def test_problem_1(self):
         self.assertEqual(fib(2), [1,1])
-        self.assertEqual(fib(10), [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
+        self.assertEqual(fib(10), [1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
 
     def test_problem_2(self):
         phi = (1 + 5**0.5) / 2 #　<--これも黄金比
-        self.assertEqual(gold_ratio(4), 1.6)
-        self.assertEqual(gold_ratio(10), 1.6179775280898876)
+        self.assertEqual(gold_ratio(4), 1.5)
+        self.assertEqual(gold_ratio(10), 1.6176470588235294)
         self.assertEqual(gold_ratio(100), phi)
 
