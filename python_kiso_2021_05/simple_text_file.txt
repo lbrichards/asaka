@@ -1,0 +1,8 @@
+some simple text, stored in a file
+
+after some blank lines, another line of text
+
+
+
+
+the last line of the file (for now, at least)

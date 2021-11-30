@@ -48,6 +48,13 @@ for k, v in pop2.items():
     print(f"{k}の人口は{v:,d}です")
 
 big_only = {k:v for k,v in pop2.items() if v>100_000}
+# print(big_only)
+for k in big_only.keys():
+
+    big_only[k]["male"] = pop2[k]["male"]
+    big_only[k]["female"] = pop2[k]["female"]
+
 print(big_only)
+
 
 
