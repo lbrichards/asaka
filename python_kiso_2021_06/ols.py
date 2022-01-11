@@ -12,9 +12,7 @@ def f(x):
 x = numpy.linspace(-8, 8)
 y = f(x) + 300 * numpy.random.normal(size=len(x), scale = 80, loc=0)
 
-
-
-HIGHEST_POWER = 6
+HIGHEST_POWER = 1
 pows= [k for k in range(HIGHEST_POWER, -1, -1)]
 A = numpy.vstack([x ** p for p in pows]).T
 
